@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffb7ca" />
+  <meta name="description" content="Lời mời kỷ niệm một năm yêu nhau dành cho Khánh Linh." />
+  <title>Happy 1 Year Anniversary | Khánh Linh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light;
+      --royal-blue: #304eae;
+      --rose: #ffb6ca;
+      --white-rose: #fff9f9;
+      --handwriting: "Dancing Script", "Lobster Two", "Brush Script MT", "Apple Chancery", cursive;
+      --display: "Playfair Display", "Bodoni MT", Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 300px;
+      min-height: 100%;
+      background: #ffb6c9;
+      color: var(--royal-blue);
+    }
+    button { font: inherit; }
+
+    .invitation {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      min-height: 100svh;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 60% 44% at 48% 47%, rgba(255,255,255,.96) 0%, rgba(255,251,252,.89) 30%, rgba(255,244,247,.44) 64%, transparent 100%),
+        radial-gradient(ellipse 58% 52% at 14% 34%, rgba(255,226,235,.85), transparent 90%),
+        radial-gradient(ellipse 58% 58% at 85% 41%, rgba(255,224,234,.92), transparent 91%),
+        radial-gradient(ellipse 80% 68% at 52% 6%, rgba(255,216,227,.86), transparent 90%),
+        linear-gradient(175deg, #ffb3c6 0%, #ffe1e9 38%, #ffe5eb 60%, #ffafc4 100%);
+    }
+    .invitation::before {
+      content: "";
+      position: absolute;
+      inset: -9%;
+      z-index: -1;
+      pointer-events: none;
+      filter: blur(45px);
+      background:
+        radial-gradient(ellipse 34% 20% at 13% 82%, rgba(255,136,166,.43), transparent 96%),
+        radial-gradient(ellipse 36% 25% at 93% 79%, rgba(255,135,166,.4), transparent 95%),
+        radial-gradient(ellipse 28% 20% at 92% 15%, rgba(255,134,159,.24), transparent 95%);
+    }
+    .invitation::after {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      box-shadow: inset 0 0 100px rgba(255,119,152,.10);
+    }
+
+    .photo-sprinkles {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .photo {
+      position: absolute;
+      filter: drop-shadow(0 16px 24px rgba(110, 60, 90, .16));
+      opacity: .98;
+      transform-origin: center center;
+      animation: float-photo 7s ease-in-out infinite;
+      will-change: transform;
+    }
+    .photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    .photo-1 { width: min(13vw, 180px); top: 26px; left: 14px; transform: rotate(-8deg); animation-delay: -.4s; }
+    .photo-2 { width: min(12vw, 165px); top: 320px; left: 12px; transform: rotate(-11deg); animation-delay: -1.6s; }
+    .photo-3 { width: min(10vw, 135px); top: 112px; right: 18px; transform: rotate(8deg); animation-delay: -2.2s; }
+    .photo-4 { width: min(13vw, 180px); bottom: 34px; left: 22px; transform: rotate(-6deg); animation-delay: -3.4s; }
+    .photo-5 { width: min(14vw, 195px); top: 360px; right: 8px; transform: rotate(8deg); animation-delay: -.9s; }
+    .photo-6 { width: min(18vw, 250px); bottom: 26px; right: 200px; transform: rotate(-7deg); animation-delay: -2.6s; }
+    .photo-7 { width: min(12vw, 165px); bottom: 20px; right: 18px; transform: rotate(6deg); animation-delay: -1.2s; }
+
+    .content {
+      width: min(1260px, 100%);
+      padding: clamp(56px, 8.2vh, 78px) 18px 52px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      animation: fade-up .75s ease-out both;
+    }
+    .heading {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: clamp(2px, .4vw, 10px);
+      width: max-content;
+      max-width: 100%;
+      margin: 0 auto;
+      font-family: var(--display);
+      font-style: italic;
+      font-weight: 900;
+      white-space: nowrap;
+      text-shadow: 0 1px 1px rgba(29,48,125,.05);
+    }
+    .happy {
+      font-size: clamp(80px, 10.9vw, 154px);
+      line-height: .99;
+      letter-spacing: -.077em;
+      display: block;
+    }
+    .big-one {
+      display: inline-block;
+      transform: scaleY(1.48);
+      transform-origin: center 95%;
+    }
+    .second-half {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      margin-bottom: 6px;
+      text-align: left;
+    }
+    .year {
+      display: block;
+      font-size: clamp(54px, 6.3vw, 90px);
+      line-height: .81;
+      letter-spacing: -.055em;
+      margin-left: 9px;
+    }
+    .anniversary {
+      display: block;
+      font-size: clamp(60px, 7.5vw, 104px);
+      line-height: .94;
+      letter-spacing: -.075em;
+    }
+
+    .heart-garland {
+      position: absolute;
+      right: -105px;
+      top: -5px;
+      width: min(26vw, 290px);
+      height: auto;
+      overflow: visible;
+      z-index: 2;
+      pointer-events: none;
+      animation: float 5s ease-in-out infinite;
+      transform-origin: 52% 0;
+    }
+    .heart-garland .heart-one { fill: #ff858c; }
+    .heart-garland .heart-two { fill: #f45a5c; }
+    .heart-garland .heart-three { fill: #ff8896; }
+
+    .message {
+      width: min(1150px, 100%);
+      margin: 17px auto 0;
+      font-family: var(--handwriting);
+      font-weight: 700;
+      font-size: clamp(24px, 2.65vw, 39px);
+      line-height: 1.09;
+      letter-spacing: -.016em;
+      text-align: center;
+      text-wrap: pretty;
+    }
+    .message p { margin: 0; }
+    .message .message-line { display: block; }
+    .message .section-gap { margin-top: 3px; }
+
+    .event-details {
+      display: grid;
+      gap: 6px;
+      width: fit-content;
+      max-width: 100%;
+      margin: 30px auto 0;
+      text-align: left;
+    }
+    .detail-row {
+      display: grid;
+      grid-template-columns: 59px minmax(0, 1fr);
+      align-items: center;
+      column-gap: 12px;
+      min-height: 55px;
+    }
+    .detail-icon {
+      width: 54px;
+      height: 54px;
+      display: block;
+      overflow: visible;
+      flex-shrink: 0;
+    }
+    .detail-text {
+      font-family: var(--handwriting);
+      font-size: clamp(25px, 2.75vw, 40px);
+      font-weight: 700;
+      line-height: 1.14;
+      white-space: nowrap;
+      letter-spacing: -.015em;
+    }
+    .detail-text strong { font-weight: 700; }
+    .detail-text time { font: inherit; }
+
+    .menu-tape {
+      position: relative;
+      width: clamp(280px, 26vw, 345px);
+      min-height: 66px;
+      margin: 23px auto 0;
+      padding: 13px 12px 12px;
+      border: 0;
+      cursor: pointer;
+      color: var(--royal-blue);
+      background: #edf2ee;
+      clip-path: polygon(3% 0%, 100% 2%, 98.4% 17%, 99.2% 27%, 97.7% 42%, 98.3% 58%, 96.7% 70%, 97.4% 98%, 0% 100%, 1.2% 80%, .2% 66%, 2% 45%, .7% 29%);
+      font-family: var(--display);
+      font-size: clamp(23px, 2.1vw, 31px);
+      font-style: italic;
+      font-weight: 900;
+      letter-spacing: -.035em;
+      transition: transform .25s ease, filter .25s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .menu-tape:hover { transform: translateY(-3px) rotate(-1.3deg) scale(1.025); filter: drop-shadow(0 8px 9px rgba(75, 59, 96, .10)); }
+    .menu-tape:active { transform: translateY(0) scale(.985); }
+    .menu-tape:focus-visible, .modal-close:focus-visible { outline: 3px solid #2846ab; outline-offset: 5px; }
+
+    /* Menu vua khung nhin: thu theo chieu rong VA chieu cao, khong cuon. */
+    body.menu-open { overflow: hidden; }
+    .menu-dialog {
+      position: fixed;
+      inset: 0;
+      width: min(460px, calc(100vw - 24px));
+      max-height: calc(100dvh - 20px);
+      margin: auto;
+      padding: 0;
+      border: 2px solid rgba(247,147,169,.46);
+      border-radius: 18px;
+      background: #fff8f8;
+      color: var(--royal-blue);
+      box-shadow: 0 20px 65px rgba(117,52,85,.2);
+      overflow: hidden;
+      overscroll-behavior: contain;
+    }
+    .menu-dialog::backdrop { background: rgba(76,41,70,.29); backdrop-filter: blur(5px); }
+    .menu-paper {
+      position: relative;
+      padding: 43px 12px 12px;
+      background: linear-gradient(180deg, #fffafc 0%, #fff5f8 100%);
+      text-align: center;
+      overflow: hidden;
+    }
+    .menu-image-wrap {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 22px rgba(117,52,85,.10);
+      background: #fff;
+    }
+    .menu-image {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: calc(100dvh - 83px);
+      object-fit: contain;
+    }
+    .modal-close {
+      position: absolute;
+      z-index: 1;
+      top: 9px;
+      right: 11px;
+      width: 37px;
+      height: 37px;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--royal-blue);
+      font-size: 29px;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .modal-close:hover { background: #ffe0e9; }
+
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-1deg); }
+      50% { transform: translateY(4px) rotate(.8deg); }
+    }
+    @keyframes float-photo {
+      0%, 100% { translate: 0 0; }
+      50% { translate: 0 8px; }
+    }
+
+    @media (min-width: 1450px) {
+      .content { padding-top: 88px; }
+    }
+    @media (max-width: 1290px) {
+      .photo-1 { width: min(12vw, 160px); top: 26px; left: 10px; }
+      .photo-2 { width: min(11vw, 150px); top: 330px; left: 8px; }
+      .photo-3 { width: min(9vw, 120px); top: 120px; right: 16px; }
+      .photo-5 { width: min(13vw, 170px); top: 380px; right: 6px; }
+      .photo-6 { width: min(16vw, 210px); right: 140px; }
+      .photo-7 { width: min(11vw, 145px); right: 12px; }
+    }
+    @media (max-width: 1100px) and (min-width: 701px) {
+      .content { padding-top: 100px; }
+      .heading { gap: 1px; }
+      .happy { font-size: 10.6vw; }
+      .year { font-size: 6.8vw; }
+      .anniversary { font-size: 7.4vw; }
+      .heart-garland { top: -38px; right: -6px; width: 27vw; }
+      .message { font-size: clamp(27px, 3vw, 36px); }
+      .photo-1 { width: 135px; top: 34px; left: 0; }
+      .photo-2 { width: 120px; top: 330px; left: 0; }
+      .photo-3 { width: 102px; top: 136px; right: -6px; }
+      .photo-4 { width: 140px; bottom: 18px; left: 4px; }
+      .photo-5 { width: 145px; top: 430px; right: -8px; }
+      .photo-6 { width: 170px; bottom: 20px; right: 105px; }
+      .photo-7 { width: 120px; bottom: 18px; right: 0; }
+    }
+    @media (max-width: 700px) {
+      .content { padding: 85px 20px 48px; }
+      .heading { width: 100%; display: flex; flex-direction: column; gap: 0; align-items: center; }
+      .happy { font-size: clamp(64px, 15.5vw, 112px); letter-spacing: -.073em; line-height: 1.02; }
+      .big-one { transform: scaleY(1.3); }
+      .second-half { margin-top: -2px; margin-bottom: 0; align-items: center; }
+      .year { margin: 0; font-size: clamp(52px, 12vw, 85px); }
+      .anniversary { font-size: clamp(52px, 11.8vw, 83px); }
+      .heart-garland { width: clamp(146px, 39vw, 222px); top: -56px; right: 1%; }
+      .message { margin-top: 25px; font-size: clamp(25px, 5.7vw, 34px); line-height: 1.17; }
+      .message .message-line { display: inline; }
+      .message .message-line::after { content: " "; }
+      .message .section-gap { margin-top: 13px; }
+      .event-details { gap: 11px; margin-top: 28px; }
+      .detail-row { grid-template-columns: 40px minmax(0, 1fr); column-gap: 11px; min-height: 46px; }
+      .detail-icon { width: 40px; height: 40px; }
+      .detail-text { font-size: clamp(22px, 4.8vw, 31px); white-space: normal; }
+      .menu-tape { margin-top: 25px; min-height: 62px; }
+      .menu-dialog { width: min(460px, calc(100vw - 24px)); }
+      .menu-paper { padding: 41px 9px 9px; }
+      .menu-image { max-height: calc(100dvh - 78px); }
+
+      .photo { opacity: .9; }
+      .photo-1 { width: 92px; top: 14px; left: -8px; }
+      .photo-2 { display: none; }
+      .photo-3 { width: 70px; top: 138px; right: -8px; }
+      .photo-4 { width: 108px; bottom: 10px; left: -12px; }
+      .photo-5 { display: none; }
+      .photo-6 { width: 118px; bottom: 12px; right: 54px; }
+      .photo-7 { width: 92px; bottom: 208px; right: -10px; }
+    }
+    @media (max-width: 390px) {
+      .content { padding-inline: 14px; }
+      .heading .happy { font-size: 15.1vw; }
+      .anniversary { font-size: 11.5vw; }
+      .message { font-size: 25px; }
+      .detail-text { font-size: 22px; }
+      .photo-1 { width: 82px; }
+      .photo-3 { width: 62px; top: 148px; }
+      .photo-4 { width: 98px; }
+      .photo-6 { width: 108px; right: 42px; }
+      .photo-7 { width: 82px; right: -8px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="invitation">
+    <div class="photo-sprinkles" aria-hidden="true">
+      <figure class="photo photo-1"><img src="assets/photo1.png" alt="" /></figure>
+      <figure class="photo photo-2"><img src="assets/photo2.png" alt="" /></figure>
+      <figure class="photo photo-3"><img src="assets/photo3.png" alt="" /></figure>
+      <figure class="photo photo-4"><img src="assets/photo4.png" alt="" /></figure>
+      <figure class="photo photo-5"><img src="assets/photo5.png" alt="" /></figure>
+      <figure class="photo photo-6"><img src="assets/photo6.png" alt="" /></figure>
+      <figure class="photo photo-7"><img src="assets/photo7.png" alt="" /></figure>
+    </div>
+
+    <div class="content">
+      <header class="heading" aria-label="Happy 1 Year Anniversary">
+        <span class="happy">HAPPY <span class="big-one">1</span></span>
+        <span class="second-half">
+          <span class="year">Year</span>
+          <span class="anniversary">Anniversary</span>
+        </span>
+        <svg class="heart-garland" viewBox="0 0 290 100" aria-hidden="true">
+          <g fill="none" stroke="#241821" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 48 C67 69 109 73 155 69 S246 54 273 30" />
+            <path d="M16 48 C9 43 8 29 14 11 M16 48 C18 29 19 17 26 11 M16 48 C4 54 3 69 6 77 M16 48 C25 53 28 61 30 70" />
+            <path d="M14 24 C-1 19 10 8 14 24 Z M17 24 C32 17 30 8 17 24 Z" />
+            <path d="M273 30 C269 13 272 8 278 4 M273 30 C280 16 281 7 285 6 M273 30 C260 27 254 35 253 43 M273 30 C286 34 290 42 289 54" />
+            <path d="M271 13 C255 8 264 0 271 13 Z M275 13 C291 10 285 0 275 13 Z" />
+          </g>
+          <path class="heart-one" d="M42 51 C20 30 23 10 38 12 C45 13 51 20 54 29 C60 17 69 12 78 17 C98 31 81 54 58 68 Z" />
+          <path class="heart-two" d="M109 67 C88 49 86 29 100 25 C109 23 116 29 119 38 C127 25 140 25 146 34 C159 51 139 70 121 81 Z" />
+          <path class="heart-three" d="M183 48 C163 26 167 9 180 8 C190 7 195 13 198 21 C205 10 217 7 225 16 C240 34 221 57 201 67 Z" />
+          <g fill="#f1556a" opacity=".38">
+            <circle cx="74" cy="25" r="2"/><circle cx="80" cy="34" r="1.5"/>
+            <circle cx="139" cy="40" r="2"/><circle cx="211" cy="19" r="2"/>
+          </g>
+        </svg>
+      </header>
+
+      <section class="message" aria-label="Lời mời gửi Khánh Linh">
+        <p>
+          <span class="message-line">Xin chào Khánh Linh đáng iêuuu, đây là người yêu đẹp trai tuyệt</span>
+          <span class="message-line">vời của Linh đâyyy!!!</span>
+        </p>
+        <p class="section-gap">
+          <span class="message-line">Anh muốn trân trọng gửi lời mời Linh yêu tới tham dự buổi hẹn hò</span>
+          <span class="message-line">kỉ niệm 1 năm chúng mình bên nhau &lt;333</span>
+        </p>
+      </section>
+
+      <section class="event-details" aria-label="Thông tin buổi hẹn">
+        <div class="detail-row">
+          <svg class="detail-icon" viewBox="0 0 54 54" role="img" aria-label="Lịch">
+            <rect x="7.5" y="11" width="39" height="36" rx="1.5" fill="#fff9fa" stroke="#101010" stroke-width="3"/>
+            <path d="M8 19.5 H46" fill="none" stroke="#111" stroke-width="7.5"/>
+            <path d="M17 7.5 V14 M37 7.5 V14" fill="none" stroke="#0d0d0d" stroke-width="3.4" stroke-linecap="round"/>
+            <g fill="#101010">
+              <rect x="15" y="26" width="5" height="5" rx=".5"/><rect x="24.5" y="26" width="5" height="5" rx=".5"/><rect x="34" y="26" width="5" height="5" rx=".5"/>
+              <rect x="15" y="35" width="5" height="5" rx=".5"/><rect x="24.5" y="35" width="5" height="5" rx=".5"/><rect x="34" y="35" width="5" height="5" rx=".5"/>
+            </g>
+          </svg>
+          <div class="detail-text"><strong>Thời gian:</strong> <time datetime="2026-10-20T20:00:00+07:00">20:00 ngày 20/10/2026</time></div>
+        </div>
+
+        <div class="detail-row">
+          <svg class="detail-icon" viewBox="0 0 54 54" role="img" aria-label="Địa điểm">
+            <path d="M27 3.7 C17.3 3.7 9.3 11.4 9.3 21.1 C9.3 33.2 27 48.1 27 48.1 C27 48.1 44.7 33.2 44.7 21.1 C44.7 11.4 36.7 3.7 27 3.7 Z" fill="#ff111c"/>
+            <circle cx="27" cy="21.1" r="7.4" fill="#fff8f9" />
+            <path d="M15 50 C21 53.3 33 53.3 39 50" fill="none" stroke="#ff111c" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+          <div class="detail-text"><strong>Địa điểm:</strong> 251 Trích Sài - Tây Hồ</div>
+        </div>
+
+        <div class="detail-row">
+          <svg class="detail-icon" viewBox="0 0 54 54" role="img" aria-label="Váy cưới">
+            <g stroke="#38363b" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 9 C22 15 21 18 17 20 L13 24 L17 29 L19 26 L19 32 L12 45 C19 52 35 52 42 45 L35 32 L35 26 L38 29 L42 24 L37 20 C33 18 32 15 33 9"/>
+              <path d="M21 9 C24 11 30 11 33 9 M21 10 L24 19 L30 19 L33 10 M24 19 L21 31 M30 19 L33 31 M19 32 C24 34 30 34 35 32 M22 34 L19 46 M31 34 L35 46 M27 34 L27 49"/>
+              <path d="M21 14 C23 18 31 18 33 14"/>
+              <path d="M5 8 L6.5 12 L10 13.5 L6.5 15 L5 19 L3.5 15 L0 13.5 L3.5 12 Z M45 7 L46.4 10.7 L50 12 L46.4 13.3 L45 17 L43.6 13.3 L40 12 L43.6 10.7 Z M48 31 L49.2 34 L52 35.2 L49.2 36.4 L48 39 L46.8 36.4 L44 35.2 L46.8 34 Z M5 29 L6 31.5 L9 33 L6 34.5 L5 37 L4 34.5 L1 33 L4 31.5 Z" />
+            </g>
+          </svg>
+          <div class="detail-text"><strong>Dresscode:</strong> Váy cô dâu + Vương miện</div>
+        </div>
+      </section>
+
+      <button class="menu-tape" id="open-menu" type="button" aria-haspopup="dialog" aria-controls="menu-dialog">MENU NÈEEEEE !!!!</button>
+    </div>
+  </main>
+
+  <dialog class="menu-dialog" id="menu-dialog" aria-labelledby="menu-title">
+    <div class="menu-paper">
+      <button class="modal-close" id="close-menu" type="button" aria-label="Đóng menu">&times;</button>
+      <div class="menu-image-wrap">
+        <img class="menu-image" id="menu-title" src="assets/menu.png" alt="Menu buổi hẹn gồm salad bơ cá hồi, sushi tổng hợp, sashimi cá hồi, cơm bò cuộn nấm và steak mì nhật" />
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    const menuDialog = document.getElementById('menu-dialog');
+    const openMenuButton = document.getElementById('open-menu');
+    const closeMenuButton = document.getElementById('close-menu');
+
+    openMenuButton.addEventListener('click', () => {
+      if (typeof menuDialog.showModal === 'function') menuDialog.showModal();
+      else menuDialog.setAttribute('open', '');
+      document.body.classList.add('menu-open');
+    });
+    closeMenuButton.addEventListener('click', () => menuDialog.close());
+    menuDialog.addEventListener('click', (event) => {
+      if (event.target === menuDialog) menuDialog.close();
+    });
+    menuDialog.addEventListener('close', () => document.body.classList.remove('menu-open'));
+  </script>
+</body>
+</html>
